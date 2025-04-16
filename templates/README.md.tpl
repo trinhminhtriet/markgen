@@ -57,9 +57,8 @@ Say Hello, I don't bite!
 #### 📫 How to reach me
 
 - Twitter: https://twitter.com/...
-- Fediverse: https://mastodon.social/@...
 - Blog: https://...
 
-Want your own self-generating profile page? Check out [readme-scribe](https://github.com/muesli/readme-scribe)!
+Want your own self-generating profile page? Check out [readme-markgen-action](https://github.com/trinhminhtriet/readme-markgen-action)!
 
 <!-- comments will be preserved -->
