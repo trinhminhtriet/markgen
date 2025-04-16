@@ -1,0 +1,93 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll": true
+  },
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "golang.go",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "go.useLanguageServer": true,
+  "go.languageServerFlags": [
+    "-debug=localhost:6060"
+  ],
+  "go.languageServerExperimentalFeatures": {
+    "diagnostics": true,
+    "documentLink": true
+  },
+  "go.testFlags": [
+    "-v",
+    "-count=1"
+  ],
+  "go.testTimeout": "30s",
+  "go.coverageOptions": "showBothCoveredAndUncoveredCode",
+  "go.buildFlags": [],
+  "go.lintFlags": [
+    "--fast"
+  ],
+  "go.lintTool": "staticcheck",
+  "go.lintOnSave": "package",
+  "go.vetFlags": [
+    "-all"
+  ],
+  "go.vetOnSave": "package",
+  "go.delveConfig": {
+    "debugAdapter": "dlv-dap",
+    "showGlobalVariables": true
+  },
+  "gopls": {
+    "ui.semanticTokens": true,
+    "analyses": {
+      "unusedparams": true,
+      "unusedwrite": true,
+      "fieldalignment": true,
+      "nilness": true,
+      "shadow": true,
+      "unusedvariable": true
+    },
+    "hints": {
+      "assignVariableTypes": true,
+      "compositeLiteralFields": true,
+      "compositeLiteralTypes": true,
+      "constantValues": true,
+      "functionTypeParameters": true,
+      "parameterNames": true,
+      "rangeVariableTypes": true
+    },
+    "formatting.gofumpt": true,
+    "staticcheck": true,
+    "completeUnimported": true,
+    "usePlaceholders": true,
+    "matcher": "fuzzy",
+    "codelenses": {
+      "generate": true,
+      "gc_details": true,
+      "test": true,
+      "tidy": true,
+      "upgrade_dependency": true,
+      "vendor": true
+    }
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/vendor": true,
+    "**/go.sum": true
+  },
+  "search.exclude": {
+    "**/vendor": true,
+    "**/go.sum": true,
+    "**/go.mod": true
+  }
+}
