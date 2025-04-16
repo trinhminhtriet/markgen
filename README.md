@@ -26,7 +26,7 @@
 
 ## 🚀 Installation
 
-Download from [latest releases](https://github.com/trinhminhtriet/blast/releases)
+Download from [latest releases](https://github.com/trinhminhtriet/markgen/releases)
 
 ## 💡 Usage
 
