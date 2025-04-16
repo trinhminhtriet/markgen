@@ -1,11 +1,28 @@
 # MarkGen
 
 ```text
-
-
+ __  __            _     ____
+|  \/  | __ _ _ __| | __/ ___| ___ _ __
+| |\/| |/ _` | '__| |/ / |  _ / _ \ '_ \
+| |  | | (_| | |  |   <| |_| |  __/ | | |
+|_|  |_|\__,_|_|  |_|\_\\____|\___|_| |_|
 ```
 
 ## ✨ Features
+
+## Features
+
+- 📜 **Markdown Template Engine**: Generate personalized markdown files using Go's powerful template engine.
+- 🔗 **GitHub Integration**: Fetch recent contributions, pull requests, starred repositories, and more with GitHub API support.
+- 📰 **RSS Feed Support**: Include content from RSS feeds directly in your markdown files.
+- 📚 **GoodReads Integration**: Display your book reviews, currently reading books, and more using the GoodReads API.
+- 📖 **Literal.club Integration**: Showcase your currently reading books from Literal.club with ease.
+- ⚙️ **Customizable Templates**: Use and modify templates for various use cases, including GitHub profile READMEs.
+- 🔒 **Authentication Support**: Securely access APIs with environment variables for tokens and credentials.
+- 🛠️ **Cross-Platform**: Available as binaries for Linux, macOS, and Windows, with support for ARM architectures.
+- 🏗️ **Build from Source**: Easily build the tool from source with Go 1.16 or higher.
+- 🤖 **GitHub Actions Ready**: Automate markdown generation with the [readme-scribe GitHub Action](https://github.com/muesli/readme-scribe/).
+- 🛠️ **Template Helpers**: Includes utilities like `humanize` for timestamps and `reverse` for slices.
 
 ## 🚀 Installation
 
