@@ -10,9 +10,7 @@ COPY . .
 
 # Build
 RUN go mod download && go mod tidy
-RUN CGO_ENABLED=0 go build \
-  -o ./dist/markgen \
-  && upx-ucl --best --ultra-brute ./dist/markgen
+RUN go build
 
 # final stage
 FROM debian:bullseye-slim

@@ -2,22 +2,20 @@ NAME    := markgen
 PACKAGE := github.com/trinhminhtriet/$(NAME)
 DATE    :=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 GIT     := $(shell [ -d .git ] && git rev-parse --short HEAD)
-VERSION := $(shell git describe --tags)
+VERSION := $(shell git describe --tags 2>/dev/null || echo "v0.0.0")
 
 default: build
 
-upgrade:
+tidy:
 	go get -u && go mod tidy
 
 build:
-	CGO_ENABLED=0 go build \
-	-ldflags "-s -w -X '${PACKAGE}/internal.VERSION=${VERSION}' -X '${PACKAGE}/internal.DATE=${DATE}'" \
-	-a -tags netgo -o dist/${NAME} main.go
+	go build
 
-build-and-link:
-	go build \
-		-ldflags "-s -w -X '${PACKAGE}/internal.VERSION=${VERSION}' -X '${PACKAGE}/internal.DATE=${DATE}'" \
-	-a -tags netgo -o dist/${NAME} main.go
+build-link:
+	go build
+	mkdir -p ${PWD}/dist
+	mv ${NAME} ${PWD}/dist/${NAME}
 	ln -s ${PWD}/dist/${NAME} /usr/local/bin/${NAME}
 
 release:
@@ -26,12 +24,8 @@ release:
 release-all:
 	goreleaser build --clean --snapshot
 
-link:
-  	# Have to check verion of folder name _darwin_amd64_v1
-	ln -sf ${PWD}/dist/${NAME}_darwin_amd64_v1/${NAME} /usr/local/bin/${NAME}
-	which ${NAME}
-
 clean:
-	$(RM) -rf dist
+	rm -rf /usr/local/bin/${NAME}
+	rm -rf dist
 
-.PHONY: default tidy build build-all build-and-link release
+.PHONY: default tidy build build-link release release-all clean
