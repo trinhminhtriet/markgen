@@ -1,9 +1,5 @@
 FROM golang:1.24-bullseye AS builder
 
-RUN apt-get update \
-  && apt-get install -y --no-install-recommends \
-  upx-ucl
-
 WORKDIR /build
 
 COPY . .
@@ -29,6 +25,6 @@ LABEL org.opencontainers.image.ref.name="${PACKAGE}" \
   org.opencontainers.image.licenses="MIT" \
   org.opencontainers.image.source="https://github.com/${PACKAGE}"
 
-COPY --from=builder /build/dist/markgen /bin/
+COPY --from=builder /build/markgen /bin/
 WORKDIR /workdir
 ENTRYPOINT ["/bin/markgen"]
