@@ -10,8 +10,6 @@
 
 ## ✨ Features
 
-## Features
-
 - 📜 **Markdown Template Engine**: Generate personalized markdown files using Go's powerful template engine.
 - 🔗 **GitHub Integration**: Fetch recent contributions, pull requests, starred repositories, and more with GitHub API support.
 - 📰 **RSS Feed Support**: Include content from RSS feeds directly in your markdown files.
