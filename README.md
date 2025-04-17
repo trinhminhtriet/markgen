@@ -27,6 +27,18 @@ Download from [latest releases](https://github.com/trinhminhtriet/markgen/releas
 
 ## 💡 Usage
 
+Render a template to stdout:
+
+```sh
+markgen template.tpl
+```
+
+Render to a file:
+
+```sh
+markgen -write /tmp/output.md template.tpl
+```
+
 ## 🤝 How to contribute
 
 We welcome contributions!
