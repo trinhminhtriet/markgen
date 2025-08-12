@@ -16,7 +16,7 @@ build-link:
 	go build
 	mkdir -p ${PWD}/dist
 	mv ${NAME} ${PWD}/dist/${NAME}
-	ln -s ${PWD}/dist/${NAME} /usr/local/bin/${NAME}
+	ln -s ${PWD}/dist/${NAME} $(HOME)/.local/bin/$(NAME)
 
 release:
 	goreleaser build --clean --snapshot --single-target
@@ -25,7 +25,7 @@ release-all:
 	goreleaser build --clean --snapshot
 
 clean:
-	rm -rf /usr/local/bin/${NAME}
+	rm -rf $(HOME)/.local/bin/$(NAME)
 	rm -rf dist
 
 .PHONY: default tidy build build-link release release-all clean
